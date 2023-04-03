@@ -6,8 +6,9 @@
     apt:
       name:
         - vim
-        - git
-        - neofetch
-  - name: run wall
-    command:
-      cmd: wall -n "Hello from Ansible"
+        - cowsay
+        - fortune
+  - name: set tz
+    community.general.timezone:
+      name: US/Central
+
