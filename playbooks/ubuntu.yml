@@ -2,12 +2,14 @@
 - name: test playbook
   hosts: all
   tasks:
+  - name: remove snapd
+    apt:
+      name: snapd
+      state: absent
   - name: install some packages
     apt:
       name:
-        - vim
         - cowsay
-        - fortune
   - name: set tz
     community.general.timezone:
       name: US/Central
