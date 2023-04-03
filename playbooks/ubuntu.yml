@@ -1,0 +1,12 @@
+---
+- name: test playbook
+  tasks:
+  - name: install some packages
+    apt:
+      name:
+        - vim
+        - git
+        - neofetch
+  - name: run wall
+    command:
+      cmd: wall -n "Hello from Ansible"
