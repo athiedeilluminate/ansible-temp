@@ -10,6 +10,7 @@
     apt:
       name:
         - cowsay
+        - curl
   - name: set tz
     community.general.timezone:
       name: US/Central
